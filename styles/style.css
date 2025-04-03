@@ -37,6 +37,59 @@
 
 
 /* 5. FRAGMENT - 1 STYLES */
+body {
+    background: url(../images/background_trail.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+
+
+/* Container for fragment content */
+.fragment-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+}
+
+/* Fragment title styling */
+.fragment-1-title {
+    font-family: 'Creepster', cursive;
+    color: white;
+    font-size: 2rem;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    margin: 0;
+}
+
+/* Image styling */
+.fragment-1-image {
+    width: 280px;
+    max-width: 90vw;
+}
+
+/* Audio styling */
+.fragment-1-audio {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 30px;
+    padding: 0.5rem;
+}
+
+
+/* Hide default header/footer */
+header, footer {
+    display: none;
+}
 
 
 /* 6. FRAGMENT - 2 STYLES */
