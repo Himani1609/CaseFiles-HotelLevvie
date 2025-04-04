@@ -9,7 +9,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- External CSS -->
-    <link rel="stylesheet" href="./styles/style.css">
+    <!-- <link rel="stylesheet" href="./styles/style.css"> -->
 </head>
 <body>
     
@@ -27,42 +27,74 @@
     </div>
     
     <!-- Chapter - 1 - Content -->
-    <div id="Chapter-1-content" class="tabcontent"  style="display:none;">
+    <div id="Chapter-1-content" class="tabcontent">
        <div class="card chapter-content w-25 mt-5" id="chapter-1-content" style="width: 18rem; border:none;">
             <h5 class="card-title text-center">Chapter Name - 1</h5>
-            <img src="./images/TEST_ONLY.jpeg" class="card-img-top" alt="...">  
+            <img src="./images/chapter1.jpeg" class="card-img-top" alt="...">  
             <audio src="./audio/test_audio.mp3" class="w-100 mt-3" controls></audio>
         </div>
     </div>
     
     <!-- Chapter - 1 - Solve -->  
-    <div id="Chapter-1-solve" class="tabcontent" style="display:block;">
+    <div id="Chapter-1-solve" class="tabcontent">
         <div class="card chapter-solve my-auto w-25 mt-5" id="chapter-1-solve" style="width: 18rem; border:none;">
             <h5 class="card-title text-center">Chapter - 1 Solve Page</h5> 
-            <img src="./images/TEST_ONLY.jpeg" class="card-img-top" alt="...">  
+            <img src="../images/chapter1.jpeg" class="card-img-top" alt="...">  
+        </div>
+        <!-- Fragments -->
+     <div class="fragment-list">
+        <!-- Chapter - 1 Fragments -->
+         <div class="chapter-1-fragments mt-3">
+            <div class="fragment-card-1 mt-1">
+                <img src="./images/c1-fragment1.jpg" alt="" id="c1-f1" draggable="true" ondragstart="dragstartHandler(event)" width="336" height="69"> 
+             </div>
+             <div class="fragment-card-2 mt-1">
+                 <img src="./images/c1-fragment2.jpg" alt="" id="c1-f2" draggable="true" ondragstart="dragstartHandler(event)" width="336" height="69"> 
+              
+              </div>
+              <div class="fragment-card-3 mt-1">
+                 <img src="./images/c1-fragment3.jpg" alt="" id="c1-f3" draggable="true" ondragstart="dragstartHandler(event)" width="336" height="69"> 
+              </div>
+         </div>
+        
+        <!-- Chapter - 2 Fragments -->
+        <div class="chapter-2-fragments mt-3">
+            <div class="fragment-card-1 mt-1">
+                <img src="./images/c3-fragment1.jpeg" alt="" id="c2-f1" draggable="true" ondragstart="dragstartHandler(event)" width="336" height="69"> 
+             </div>
+             <div class="fragment-card-2 mt-1">
+                 <img src="./images/c3-fragment2.jpeg" alt="" id="c2-f2" draggable="true" ondragstart="dragstartHandler(event)" width="336" height="69"> 
+                 
+              </div>
+              <div class="fragment-card-3 mt-1">
+                <img src="./images/c3-fragment3.jpeg" alt="" id="c2-f3" draggable="true" ondragstart="dragstartHandler(event)" width="336" height="69"> 
+              </div>
+        </div>
+       
+        <!-- Chapter - 3 Fragments -->
+        <div class="chapter-3-fragments mt-3">
+            <div class="fragment-card-1 mt-1">
+                <img src="./images/c3-fragment1.jpeg" alt="" id="c3-f1" draggable="true" ondragstart="dragstartHandler(event)" width="336" height="69"> 
+            </div>
+            <div class="fragment-card-2 mt-1">
+                <img src="./images/c3-fragment2.jpeg" alt="" id="c3-f2" draggable="true" ondragstart="dragstartHandler(event)" width="336" height="69"> 
+            </div>
+            <div class="fragment-card-3 mt-1">
+                <img src="./images/c3-fragment3.jpeg" alt="" id="c3-f3" draggable="true" ondragstart="dragstartHandler(event)" width="336" height="69"> 
+            </div>
         </div>
 
-    <!-- Fragment solve -->
-    <div id="draggable" class="ui-widget-content">
-        <div id="fragment-card-1">
+
+
+        <div id="target" style="border: 3px solid red; width:400px; height: 700px;" ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)">
 
         </div>
-        <div id="fragment-card-2">
-
-        </div>
-        <div id="fragment-card-3">
-
-        </div>
-        <div id="fragment-card-4">
-
-        </div>
-        <div id="fragment-card-5">
-
-        </div>
-        <div id="fragment-card-6">
-
-        </div>
+     </div>
     </div>
+
+    
+
+ 
 
 
     </div>
