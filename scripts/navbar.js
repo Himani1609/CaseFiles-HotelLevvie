@@ -1,13 +1,13 @@
-const header = document.getElementById("header");
+// const header = document.getElementById("header");
 
-function getNavigation() {
-  const title = document.createElement("h1");
-  title.id = "case-title"; 
-  title.textContent = "CASE FILES";
-  header.appendChild(title);
-}
+// function getNavigation() {
+//   const title = document.createElement("h1");
+//   title.id = "case-title"; 
+//   title.textContent = "CASE FILES";
+//   header.appendChild(title);
+// }
 
-getNavigation();
+// getNavigation();
 
 
 // // Get the header element
@@ -29,3 +29,40 @@ getNavigation();
 
 // // Call the function
 // getNavigation();
+
+
+const header = document.getElementById("header");
+
+function getNavigation() {
+  const navContainer = document.createElement("div");
+  navContainer.classList.add("nav-container");
+
+  // Left - Title
+  const title = document.createElement("h1");
+  title.id = "case-title";
+  title.textContent = "CASE FILES";
+
+  // Right - Navigation Links
+  const navLinks = document.createElement("div");
+  navLinks.id = "nav-links";
+
+  const homeLink = document.createElement("a");
+  homeLink.href = "#";
+  homeLink.textContent = "HOME";
+
+  const aboutLink = document.createElement("a");
+  aboutLink.href = "#";
+  aboutLink.textContent = "ABOUT";
+
+  navLinks.appendChild(homeLink);
+  navLinks.appendChild(aboutLink);
+
+  // Append both to nav container
+  navContainer.appendChild(title);
+  navContainer.appendChild(navLinks);
+
+  // Append to header
+  header.appendChild(navContainer);
+}
+
+getNavigation();

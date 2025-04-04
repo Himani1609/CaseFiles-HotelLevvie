@@ -1,29 +1,6 @@
-/********************************************** 
-
-    ************CSS STYLING INDEX**************
-
-    1. GLOBAL STYLES
-    2. CHAPTER - 1 STYLES
-    3. CHAPTER - 2 STYLES
-    4. CHAPTER - 3 STYLES
-    5. FRAGMENT - 1 STYLES
-    6. FRAGMENT - 2 STYLES
-    7. FRAGMENT - 3 STYLES
-    8. FRAGMENT - 4 STYLES
-    9. FRAGMENT - 5 STYLES
-    10. FRAGMENT - 6 STYLES
-    11. FRAGMENT - 7 STYLES
-    12. FRAGMENT - 8 STYLES
-    13. FRAGMENT - 9 STYLES
-    14. SOLUTION INTERFACE STYLING
-    15. INTRO PAGE STYLING
-    
-    ************CSS STYLING INDEX**************
-
-***********************************************/
-
-
-/* 1. GLOBAL STYLES */
+/* ===========================================
+   GLOBAL STYLES
+=========================================== */
 @import url('https://fonts.googleapis.com/css2?family=Creepster&family=Lacquer&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Special+Elite&display=swap');
 
 * {
@@ -39,19 +16,27 @@ body {
     font-family: 'Arial', sans-serif;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    padding-top: 100px;
-    padding-bottom: 60px;
-    position: relative;
     color: white;
 }
 
-/* Header */
+
+/* ===========================================
+   HEADER
+=========================================== */
 #header {
-    position: fixed;
+    width: 100%;
+}
+
+.nav-container {
+    position: relative;
     top: 20px;
     left: 40px;
+    right: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% - 80px);
     z-index: 1000;
 }
 
@@ -63,11 +48,7 @@ body {
     margin: 0;
 }
 
-/* Nav links (top-right corner) */
 #nav-links {
-    position: fixed;
-    top: 20px;
-    right: 40px;
     font-family: 'Lacquer', system-ui;
     font-size: 1.2rem;
 }
@@ -75,7 +56,7 @@ body {
 #nav-links a {
     color: white;
     text-decoration: none;
-    margin-left: 20px;
+    margin-left: 30px;
     transition: color 0.3s ease;
 }
 
@@ -83,47 +64,34 @@ body {
     color: #ffcccc;
 }
 
-/* Footer */
+
+/* ===========================================
+   MAIN SECTION
+=========================================== */
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+
+/* ===========================================
+   FOOTER
+=========================================== */
 #footer {
-    position: fixed;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
     font-family: 'Special Elite', system-ui;
     font-size: 0.9rem;
     color: white;
-    text-align: center;
+    margin-top: auto;
 }
 
 
-.tabcontent {
-    display: none;
-    padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-top: none;
-}
-
-.tab{
-    text-align: center;
-}
-
-/* 2. CHAPTER - 1 STYLES */
-
-#chapter-1-content,#Chapter-1-content{
-    display: block;
-    margin: 0 auto;
-}
-#chapter-1-solve{
-    margin: 0 auto;
-}
-
-/* 3. CHAPTER - 2 STYLES */
-
-
-/* 4. CHAPTER - 3 STYLES */
-
-
-/* 5. FRAGMENT - 1 STYLES */
+/* ===========================================
+   FRAGMENT STYLES
+=========================================== */
 .fragment-1 {
     display: flex;
     flex-direction: column;
@@ -135,8 +103,7 @@ body {
 .fragment-box {
     background-color: black;
     border: 2px solid white;
-    width: 280px;
-    height: auto;
+    width: 500px;
     padding: 1rem;
     border-radius: 12px;
     display: flex;
@@ -157,37 +124,14 @@ audio {
     border-radius: 30px;
     padding: 0.5rem;
     max-width: 320px;
-    outline: none;
     background-color: white;
+    outline: none;
 }
 
 
-
-/* 7. FRAGMENT - 3 STYLES */
-
-
-/* 8. FRAGMENT - 4 STYLES */
-
-
-/* 9. FRAGMENT - 5 STYLES */
-
-
-/* 10. FRAGMENT - 6 STYLES */
-
-
-/* 11. FRAGMENT - 7 STYLES */
-
-
-/* 12. FRAGMENT - 8 STYLES */
-
-
-/* 13. FRAGMENT - 9 STYLES */
-
-
-/* 14. SOLUTION INTERFACE STYLING */
-
-
-/* 15. INTRO PAGE STYLING */
+/* ===========================================
+   INTRO PAGE STYLING
+=========================================== */
 .main_section {
     margin-top: 100px;
     width: 100%;
@@ -197,7 +141,7 @@ audio {
 .main_section img {
     border: 4px solid white;
     border-radius: 20px;
-    box-shadow: 0 0 20px red;
+    box-shadow: 0 0 10px rgb(138, 19, 19);
     width: 100%;
     max-width: 100%;
 }
@@ -216,4 +160,32 @@ audio {
     padding: 0.5rem;
     width: 100%;
     max-width: 300px;
+}
+
+
+/* ===========================================
+   RESPONSIVE STYLES
+=========================================== */
+@media screen and (max-width: 1024px) {
+    .fragment-box {
+        max-width: 280px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    #nav-links {
+        align-self: flex-start;
+        margin-top: 0.5rem;
+    }
+
+    #nav-links a {
+        margin-left: 0;
+        margin-right: 20px;
+    }
 }
