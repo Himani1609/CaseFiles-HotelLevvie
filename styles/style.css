@@ -1,6 +1,5 @@
 /********************************************** 
 
-
     ************CSS STYLING INDEX**************
 
     1. GLOBAL STYLES
@@ -17,9 +16,9 @@
     12. FRAGMENT - 8 STYLES
     13. FRAGMENT - 9 STYLES
     14. SOLUTION INTERFACE STYLING
+    15. INTRO PAGE STYLING
     
     ************CSS STYLING INDEX**************
-
 
 ***********************************************/
 
@@ -36,7 +35,7 @@
 body {
     background: url(../images/background-regular.png) no-repeat center center fixed;
     background-size: cover;
-    height: 100vh;
+    min-height: 100vh;
     font-family: 'Arial', sans-serif;
     display: flex;
     flex-direction: column;
@@ -45,6 +44,7 @@ body {
     padding-top: 100px;
     padding-bottom: 60px;
     position: relative;
+    color: white;
 }
 
 /* Header */
@@ -55,19 +55,45 @@ body {
     z-index: 1000;
 }
 
+#case-title {
+    font-family: 'Lacquer', system-ui;
+    font-size: 2.2rem;
+    color: white;
+    text-shadow: 2px 2px 4px black;
+    margin: 0;
+}
+
+/* Nav links (top-right corner) */
+#nav-links {
+    position: fixed;
+    top: 20px;
+    right: 40px;
+    font-family: 'Lacquer', system-ui;
+    font-size: 1.2rem;
+}
+
+#nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+
+#nav-links a:hover {
+    color: #ffcccc;
+}
+
 /* Footer */
 #footer {
     position: fixed;
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
-    /* font-family: 'Courier New', monospace; */
     font-family: 'Special Elite', system-ui;
     font-size: 0.9rem;
     color: white;
     text-align: center;
 }
-
 
 
 .tabcontent {
@@ -98,15 +124,6 @@ body {
 
 
 /* 5. FRAGMENT - 1 STYLES */
-#case-title {
-    /* font-family: 'Creepster', cursive; */
-    font-family: 'Lacquer', system-ui;
-    font-size: 2.2rem;
-    color: white;
-    text-shadow: 2px 2px 4px black;
-    margin: 0;
-}
-
 .fragment-1 {
     display: flex;
     flex-direction: column;
@@ -114,6 +131,7 @@ body {
     gap: 1.5rem;
     text-align: center;
 }
+
 .fragment-box {
     background-color: black;
     border: 2px solid white;
@@ -128,9 +146,7 @@ body {
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.15);
 }
 
-
 .fragment-name {
-    /* font-family: 'Creepster', cursive; */
     font-family: 'Lacquer', system-ui;
     color: white;
     font-size: 1.3rem;
@@ -142,10 +158,9 @@ audio {
     padding: 0.5rem;
     max-width: 320px;
     outline: none;
+    background-color: white;
 }
 
-
-/* 6. FRAGMENT - 2 STYLES */
 
 
 /* 7. FRAGMENT - 3 STYLES */
@@ -171,3 +186,34 @@ audio {
 
 /* 14. SOLUTION INTERFACE STYLING */
 
+
+/* 15. INTRO PAGE STYLING */
+.main_section {
+    margin-top: 100px;
+    width: 100%;
+    font-family: 'Special Elite', monospace;
+}
+
+.main_section img {
+    border: 4px solid white;
+    border-radius: 20px;
+    box-shadow: 0 0 20px red;
+    width: 100%;
+    max-width: 100%;
+}
+
+.main_section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #eaeaea;
+    white-space: pre-line;
+}
+
+.main_section audio {
+    margin-top: 1.5rem;
+    border-radius: 30px;
+    background: white;
+    padding: 0.5rem;
+    width: 100%;
+    max-width: 300px;
+}
