@@ -27,8 +27,26 @@
 /* 1. GLOBAL STYLES */
 
 
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+.tab{
+    text-align: center;
+}
+
 /* 2. CHAPTER - 1 STYLES */
 
+#chapter-1-content,#Chapter-1-content{
+    display: block;
+    margin: 0 auto;
+}
+#chapter-1-solve{
+    margin: 0 auto;
+}
 
 /* 3. CHAPTER - 2 STYLES */
 
