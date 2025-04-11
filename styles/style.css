@@ -162,6 +162,16 @@ audio {
     max-width: 300px;
 }
 
+/* ===========================================
+   CHAPTER PAGE STYLING
+=========================================== */
+
+#target{
+    border: 3px solid red; 
+    min-width: 400px;
+    min-height: 400px;
+}
+
 
 /* ===========================================
    RESPONSIVE STYLES
@@ -188,4 +198,35 @@ audio {
         margin-left: 0;
         margin-right: 20px;
     }
+}
+
+/* Designers Remove this please */
+
+.fragment-list{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#target{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.answer_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.answer_box{
+    width: 310px;
+    height: 210px;
+    padding: 5px;
+    border: 2px solid green;
+}
+
+.check_logos div{
+    display: none;
 }
