@@ -250,3 +250,33 @@ audio {
     }
 }
 
+/* Designers Remove this please */
+
+.fragment-list{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#target{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.answer_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.answer_box{
+    width: 310px;
+    height: 210px;
+    padding: 5px;
+    border: 2px solid green;
+}
+
+.check_logos div{
+    display: none;
+}
