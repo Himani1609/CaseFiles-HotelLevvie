@@ -58,6 +58,40 @@ reset.onclick = function() {
   window.location.reload();
 }
 
+let currentAnswerIndex = 0;
+const maxAnswers = 3;
+
+let list_of_element = [];
+function doubleclickhandler(ev){
+  ev.preventDefault();
+
+  if (list_of_element.includes(ev.target.id)) {
+    console.log("Already placed.");
+    return;
+  }
+
+  // Find the first available answer box
+  let placed = false;
+  for (let i = 1; i <= maxAnswers; i++) {
+    const targetBox = document.getElementById(`ans${i}`);
+    
+    // If the answer box is empty (has no img)
+    if (targetBox && targetBox.children.length === 0) {
+      targetBox.appendChild(ev.target);
+      list_of_element.push(ev.target.id);
+      console.log(`Transferred image ${ev.target.id} to answer container ans${i}`);
+      placed = true;
+      togglestatus(); 
+      break;
+    }
+  }
+
+  if (!placed) {
+    console.log("All answer containers are full.");
+  }
+}
+
+
 function dragstartHandler(ev) {
   ev.dataTransfer.setData("text", ev.target.id);
   console.log("drag start", ev.target.id);
@@ -67,42 +101,74 @@ function dragoverHandler(ev) {
   ev.preventDefault();
 }
 
-let list_of_element = [];
 function dropHandler(ev) {
   ev.preventDefault();
   const data = ev.dataTransfer.getData("text");
   const targetElement = ev.target;
 
-  if (targetElement && (targetElement.id === "div2" || targetElement.id === "ans1" || targetElement.id === "ans2" || targetElement.id === "ans3")) {
-    const droppedElement = targetElement.appendChild(document.getElementById(data));
+  if (
+    targetElement &&
+    (targetElement.id === "div1" ||
+      targetElement.id === "div2" ||
+      targetElement.id === "div3" ||
+      targetElement.id === "div4" ||
+      targetElement.id === "div5" ||
+      targetElement.id === "div6" ||
+      targetElement.id === "div7" ||
+      targetElement.id === "div8" ||
+      targetElement.id === "div9" ||
+      targetElement.id === "ans1" ||
+      targetElement.id === "ans2" ||
+      targetElement.id === "ans3")
+  ) {
+    const droppedElement = document.getElementById(data);
+    targetElement.appendChild(droppedElement);
     console.log("Dropped element: ", droppedElement.id);
-    
 
-    if (targetElement.id === "ans1" || targetElement.id === "ans2" || targetElement.id === "ans3") {
-
+    if (
+      targetElement.id === "ans1" ||
+      targetElement.id === "ans2" ||
+      targetElement.id === "ans3"
+    ) {
       if (!list_of_element.includes(droppedElement.id)) {
-        list_of_element.push(droppedElement.id); 
+        list_of_element.push(droppedElement.id);
         console.log(list_of_element);
-        togglestatus(); 
+        togglestatus();
+
+        currentAnswerIndex = document.querySelectorAll(".answer_box img").length;
       }
     } else {
       const index = list_of_element.indexOf(droppedElement.id);
       if (index !== -1) {
-        list_of_element.splice(index, 1); 
-        console.log(list_of_element); 
-        togglestatus(); 
+        list_of_element.splice(index, 1);
+        console.log(list_of_element);
+        togglestatus();
+
+
+        currentAnswerIndex = document.querySelectorAll(".answer_box img").length;
       }
     }
   }
 }
 
+
 function togglestatus() {
   
-  const allCards = document.querySelectorAll("#div2 .fragment");
+  const allCards = document.querySelectorAll("#fragment_list .fragment");
+  const allAnswerCards = document.querySelectorAll("#answer_container .fragment");
+
   if (list_of_element.length >= 3) {
     allCards.forEach(card => card.setAttribute("draggable", "false"));
+    allCards.forEach(card => card.setAttribute("ondblclick", ""));
   } else {
     allCards.forEach(card => card.setAttribute("draggable", "true"));
+    allCards.forEach(card => card.setAttribute("ondblclick", "doubleclickhandler(event)"));
+  }
+
+  if (list_of_element.length >= 3) {
+    allAnswerCards.forEach(card => card.setAttribute("ondblclick", ""));
+  } else {
+    allAnswerCards.forEach(card => card.setAttribute("ondblclick", "doubleclickhandler(event)"));
   }
 }
 

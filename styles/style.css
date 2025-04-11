@@ -280,3 +280,10 @@ audio {
 .check_logos div{
     display: none;
 }
+
+.frag_holder{
+    border: 1px red solid;
+    height: 210px;
+    width: 310px;
+    padding: 5px;
+}
