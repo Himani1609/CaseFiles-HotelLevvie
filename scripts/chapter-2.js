@@ -30,10 +30,10 @@ function openTab(event, tabChosen) {
     }
     tablinks = document.getElementsByClassName("tablinks");
     for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
+      tablinks[i].className = tablinks[i].className.replace("active", "");
     }
-    document.getElementById(tabChosen).style.display = "block";
-    event.currentTarget.className += " active";
+    document.getElementById(tabChosen).style.display = "flex";
+    event.currentTarget.className += "active";
 }
 
 function generateFragments(){
