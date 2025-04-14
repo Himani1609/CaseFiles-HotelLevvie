@@ -178,6 +178,84 @@ audio {
     max-width: 300px;
 }
 
+/* ===========================================
+   ABOUT PAGE STYLES OR Credits Page
+=========================================== */
+#about-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Special Elite', system-ui;
+}
+
+#about-page main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+#about-page .teams-container {
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+    margin: 0 auto;
+    padding: 30px;
+    max-width: 90%;
+}
+
+#about-page .team-column {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+#about-page .role-column,
+#about-page .name-column {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    text-align: left;
+}
+#about-page .role-column {
+    width: auto; 
+    min-width: max-content; 
+}
+
+#about-page .name-column {
+    width: auto;
+    min-width: max-content;
+}
+
+#about-page .team-title {
+    margin-bottom: 15px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#about-page .team-member {
+    font-size: 1.3rem;
+    margin: 0;
+    white-space: nowrap;
+}
+
+#about-page .footer-links {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#about-page .footer-links a {
+    text-decoration: none;
+    color: white;
+    margin: 0 15px;
+    font-size: 1.2rem;
+}
+
+#about-page .footer-links a:hover {
+    color: rgb(138, 19, 19);
+}
 
 /* ===========================================
    RESPONSIVE STYLES
@@ -250,7 +328,7 @@ audio {
     }
 }
 
-/* Designers Remove this please */
+/* Designers redefine everthing below this please */
 
 .fragment-list{
     display: flex;
@@ -286,4 +364,24 @@ audio {
     height: 210px;
     width: 310px;
     padding: 5px;
+}
+
+#Chapter-1-solve{
+    display: none;
+
+}
+
+
+/* FULL CHAPTER ORDERING STYLES */
+
+#Full-chapter-solve{
+    display: none;
+}
+
+#full-chapter-1-audio,#full-chapter-2-audio,#full-chapter-3-audio{
+    display: none;
+}
+
+#full-chapters{
+    display: flex;
 }
