@@ -130,6 +130,9 @@ audio {
     display: block;
     margin: 1.5rem auto 0 auto;
 }
+#correct-audio{
+    display: none;
+}
 
 
 /* ===========================================
@@ -255,6 +258,25 @@ audio {
 
 #about-page .footer-links a:hover {
     color: rgb(138, 19, 19);
+}
+
+/* ===========================================
+   CHAPTER STYLES
+=========================================== */
+
+#Hotel-Levvie .tab{
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#Hotel-Levvie #Chapter-1-content{
+    display: flex;
+    justify-content: center;
+}
+#Hotel-Levvie #case-title:hover {
+    color: #8a1313;
+    cursor: pointer;
 }
 
 /* ===========================================
