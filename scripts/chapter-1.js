@@ -192,8 +192,9 @@ check.onclick = function() {
 
   if (submitted_ids.length !== correct_chapter_1.length) {
     isCorrect = [false, false, false];
-    error.innerHTML = "You need to select 3 fragment pieces";
+   error.innerHTML = "You need to select 3 fragment pieces";
   } else {
+    error.innerHTML = "";
     for (let i = 0; i < correct_chapter_1.length; i++) {
       if (submitted_ids[i] === correct_chapter_1[i]) {
         isCorrect[i] = true;
