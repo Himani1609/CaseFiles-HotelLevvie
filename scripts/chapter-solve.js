@@ -27,10 +27,10 @@ function openTab(event, tabChosen) {
     }
     tablinks = document.getElementsByClassName("tablinks");
     for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
+      tablinks[i].className = tablinks[i].className.replace("active", "");
     }
     document.getElementById(tabChosen).style.display = "block";
-    event.currentTarget.className += " active";
+    event.currentTarget.className += "active";
 }
 
 function turnOnAudio(chapterNumber){
@@ -95,7 +95,7 @@ const reset = document.getElementById("reset");
 const error = document.getElementById("error_text");
 
 const correct_chapters = JSON.parse(localStorage.getItem('Chapter-solution'));
-const completed = JSON.parse(localStorage.getItem('correct_chapters'));
+const correct = JSON.parse(localStorage.getItem('correct_chapters'));
 
 
 reset.onclick = function() {
@@ -273,7 +273,7 @@ check.onclick = function() {
   }
 }
 
-if(completed){
+if(correct){
     chapter_list.style.display = "none";
-    Full_chapter.innerHTML = "<h1>You have Solved The Chapters</h1>"
+    Full_chapter.innerHTML = "Correct Chapters";
 }

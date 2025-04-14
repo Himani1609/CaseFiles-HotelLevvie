@@ -1,5 +1,7 @@
 // const chapter1Content = document.getElementById("chapter-1-content");
 const chapter1Solve = document.getElementById("chapter-1-solve");
+const full_chapter = document.getElementById("Chapter-1-solve");
+const correct_audio = document.getElementById("correct-audio");
 
 // // Display the Listening content for chapter
 // function displayListenContent() {
@@ -11,7 +13,6 @@ const chapter1Solve = document.getElementById("chapter-1-solve");
  
 // }
 
-const isSolved = JSON.parse(localStorage.getItem('Correct_Chapter_1'));
 
 const fragmentImages = [
   './images/TEST_ONLY.jpeg',
@@ -53,6 +54,10 @@ const error = document.getElementById("error_text");
 const correct_chapter_1 = JSON.parse(localStorage.getItem('Chapter-1'));
 // const correct_chapter_2 = JSON.parse(localStorage.getItem('Chapter-2'));
 // const correct_chapter_3 = JSON.parse(localStorage.getItem('Chapter-3'));
+
+const correct = JSON.parse(localStorage.getItem('Correct_Chapter_1'));
+const correct2 = JSON.parse(localStorage.getItem('Correct_Chapter_2'));
+const correct3 = JSON.parse(localStorage.getItem('Correct_Chapter_3'));
 
 reset.onclick = function() {
   window.location.reload();
@@ -233,11 +238,15 @@ check.onclick = function() {
   if(flag){
     localStorage.setItem("Correct_Chapter_1",  JSON.stringify(true));
   }
+
+  if(correct && correct2 && correct3){
+    window.location.href("./chapter-solve.html")
+  }
 }
 
-// window.onload = ()=>{
-//   if(isSolved){
-//     chapter1Solve.style.display = "none";
-//   }
-  
-// }
+if(correct){
+  chapter1Solve.style.display = "none";
+  full_chapter.innerHTML = "<h1 class='text-center text-white'>You have Solved The Chapter - 1</h1>";
+  correct_audio.style.display = "block";
+}
+
