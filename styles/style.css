@@ -61,7 +61,7 @@ body {
 }
 
 #nav-links a:hover {
-    color: #ffcccc;
+    color: rgba(57, 111, 134);
 }
 
 
@@ -177,9 +177,8 @@ audio {
     width: 100%;
     max-width: 300px;
 }
-
 /* ===========================================
-   ABOUT PAGE STYLES OR Credits Page
+   ABOUT PAGE STYLES
 =========================================== */
 #about-page {
     min-height: 100vh;
@@ -257,6 +256,182 @@ audio {
     color: rgb(138, 19, 19);
 }
 
+
+
+/* ===========================================
+   CHAPTER CARDS & PUZZLE INTERFACE
+=========================================== */
+
+.tab-container {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.tab-button {
+    border: 2px solid white;
+    background-color: black;
+    color: white;
+    padding: 15px 40px;
+    font-family: 'Lacquer', system-ui;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.tab-button.active {
+    background-color: #8a1313;
+}
+
+.tab-button:first-child {
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.tab-button:last-child {
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+#case-title:hover {
+    color: #8a1313;
+    cursor: pointer;
+}
+
+.solve-section {
+    display: none;
+}
+.chapter-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 40px auto;
+    max-width: 1200px;
+}
+.chapter-cards-listen {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+}
+.card-image {
+        width: 300px;  
+        height: auto;
+        border: 3px solid white;
+        border-radius: 15px;
+        transition: border-color 0.3s ease;
+}
+.card-image.active {
+    border-color: #8a1313; /* Dark red color for active/selected state */
+    box-shadow: 0 0 10px rgba(138, 19, 19, 0.5); 
+}
+.chapter-cards-solve {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        margin: 20px auto;
+        max-width: 1200px;
+}
+
+.chapter-cards {
+        width: 300px;
+        height: auto;
+        object-fit: cover;
+        border: 3px solid white;
+        border-radius: 10px;
+        transition: transform 0.2s ease;
+        cursor: grab;
+}
+
+.chapter-cards:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+
+.answer-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        margin: 30px auto;
+}
+
+.answer_box {
+        width: 300px;
+        height: 300px;
+        background-color: rgba(0, 0, 0, 0.4);
+        border: 2px dashed white;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+}
+
+.answer_box img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain; 
+        border-radius: 8px;
+}
+
+    /* Instruction text */
+.instruction-text {
+        font-family: 'Special Elite', system-ui;
+        font-size: 1.8rem;
+        color: white;
+        text-align: center;
+        margin: 20px 0;
+}
+.answer {
+        position: relative;
+        margin-bottom: 35px; /* Add space for the feedback label */
+}
+
+.feedback-label {
+        position: absolute;
+        bottom: -30px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+        font-family: 'Special Elite', system-ui;
+        font-size: 1.2rem;
+        display: none;
+}
+
+.feedback-correct {
+        color: #4CAF50;
+}
+
+.feedback-incorrect {
+        color: #F44336;
+}
+
+.feedback-replace {
+        color: #FFC107;
+}
+
+/* Add green border for correct answers */
+.answer_box.correct-border {
+        border: 2px solid #4CAF50;
+}
+
+/* Add red border for incorrect answers */
+.answer_box.incorrect-border {
+        border: 2px solid #F44336;
+}
+
+/* Add yellow border for "replace" answers */
+.answer_box.replace-border {
+        border: 2px solid #FFC107;
+}
+
 /* ===========================================
    RESPONSIVE STYLES
 =========================================== */
@@ -273,6 +448,22 @@ audio {
         font-size: 1.3rem;
         margin: 1.5em 1rem;
     }
+    .chapter-cards-listen {
+        min-width: 120px;
+        max-width: 200px;
+    }
+    .chapter-1-solve{
+        min-width: 120px;
+        max-width: 200px;
+    }
+    .answer_box{
+        max-width: 200px;
+    }
+    #about-page .teams-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
 }
 
 @media screen and (max-width: 768px) {
@@ -327,61 +518,34 @@ audio {
         padding: 1rem;
     }
 }
+@media screen and (max-width: 480px) {
+    .instruction-text {
+        font-size: 1.2rem;
+        padding: 0 1rem;
+    }
 
-/* Designers redefine everthing below this please */
+    .tab-button {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
 
-.fragment-list{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
+    .fragment-box {
+        width: 95%;
+    }
 }
 
-#target{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
-}
-.answer_container{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.answer_box{
-    width: 310px;
-    height: 210px;
-    padding: 5px;
-    border: 2px solid green;
+/* Styles to support touch drag and drop */
+.chapter-cards.being-dragged {
+    opacity: 0.4;
 }
 
-.check_logos div{
-    display: none;
+/* Indicate when an answer box can accept a drop */
+.answer_box.can-drop {
+    border: 2px dashed #10d3e4;
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
-.frag_holder{
-    border: 1px red solid;
-    height: 210px;
-    width: 310px;
-    padding: 5px;
-}
-
-#Chapter-1-solve{
-    display: none;
-
-}
-
-
-/* FULL CHAPTER ORDERING STYLES */
-
-#Full-chapter-solve{
-    display: none;
-}
-
-#full-chapter-1-audio,#full-chapter-2-audio,#full-chapter-3-audio{
-    display: none;
-}
-
-#full-chapters{
-    display: flex;
+/* Disable text selection during drag operations */
+body.dragging {
+    user-select: none;
 }
