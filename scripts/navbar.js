@@ -47,11 +47,11 @@ function getNavigation() {
   navLinks.id = "nav-links";
 
   const homeLink = document.createElement("a");
-  homeLink.href = "#";
+  homeLink.href = "index.html";
   homeLink.textContent = "HOME";
 
   const aboutLink = document.createElement("a");
-  aboutLink.href = "#";
+  aboutLink.href = "credits.html";
   aboutLink.textContent = "ABOUT";
 
   navLinks.appendChild(homeLink);

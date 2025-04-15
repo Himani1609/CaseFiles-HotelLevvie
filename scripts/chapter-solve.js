@@ -19,25 +19,59 @@ const chapter1Img = document.getElementById("chapter-1-img");
 const chapter2Img = document.getElementById("chapter-2-img");
 const chapter3Img = document.getElementById("chapter-3-img");
 
+// function openTab(event, tabChosen) {
+//     var i, tabcontent, tablinks;
+//     tabcontent = document.getElementsByClassName("tabcontent");
+//     for (i = 0; i < tabcontent.length; i++) {
+//       tabcontent[i].style.display = "none";
+//     }
+//     tablinks = document.getElementsByClassName("tablinks");
+//     for (i = 0; i < tablinks.length; i++) {
+//       tablinks[i].className = tablinks[i].className.replace("active", "");
+//     }
+//     document.getElementById(tabChosen).style.display = "block";
+//     event.currentTarget.className += "active";
+// }
+
+
 function openTab(event, tabChosen) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace("active", "");
-    }
-    document.getElementById(tabChosen).style.display = "block";
-    event.currentTarget.className += "active";
+  // Hide all tab content
+  const tabcontent = document.getElementsByClassName("tabcontent");
+  for (let i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Remove active class from buttons
+  const tablinks = document.getElementsByClassName("tablinks");
+  for (let i = 0; i < tablinks.length; i++) {
+    tablinks[i].classList.remove("active");
+  }
+
+  // Show selected tab and mark active
+  document.getElementById(tabChosen).style.display = "block";
+  event.currentTarget.classList.add("active");
+
+  // Reset audio players and hide them
+  [fullChapter1, fullChapter2, fullChapter3].forEach(audio => {
+    audio.pause();
+    audio.currentTime = 0;
+    audio.style.display = "none";
+  });
+
+  // Remove borders from all chapter images
+  [chapter1Img, chapter2Img, chapter3Img].forEach(img => {
+    img.style.border = "none";
+    img.style.padding = "0"; 
+  });
 }
+
 
 function turnOnAudio(chapterNumber){
   if(chapterNumber==='chapter-1'){
     // turn on the chapter 1
     fullChapter1.style.display = "block";
-    chapter1Img.style.border = "2px solid white";
+    chapter1Img.style.border = "4px dashed  #5e1818"; 
+    chapter1Img.style.padding = "10px";
     
     // turn off other chapters and audios
     fullChapter2.pause();
@@ -54,7 +88,9 @@ function turnOnAudio(chapterNumber){
   else if(chapterNumber==='chapter-2'){
     // turn on the chapter 2
     fullChapter2.style.display = "block";
-    chapter2Img.style.border = "2px solid white";
+    chapter2Img.style.border = "4px dashed  #5e1818";
+    chapter2Img.style.padding = "10px";
+
 
     // turn off other chapters and audios
     fullChapter1.pause();
@@ -72,7 +108,8 @@ function turnOnAudio(chapterNumber){
   else if(chapterNumber==='chapter-3'){
     // turn on the chapter 3
     fullChapter3.style.display = "block";
-    chapter3Img.style.border = "2px solid white";
+    chapter3Img.style.border = "4px dashed  #5e1818"; 
+    chapter3Img.style.padding = "10px";
 
     // turn off other chapters and audios
     fullChapter1.pause();
@@ -88,7 +125,6 @@ function turnOnAudio(chapterNumber){
   }
 }
 
-// chapter
 // CHAPTER
 const check = document.getElementById("check");
 const reset = document.getElementById("reset");

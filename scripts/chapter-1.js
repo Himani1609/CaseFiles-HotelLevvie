@@ -109,7 +109,27 @@ function dragoverHandler(ev) {
 function dropHandler(ev) {
   ev.preventDefault();
   const data = ev.dataTransfer.getData("text");
+  // const droppedElement = document.getElementById(data);
   const targetElement = ev.target;
+
+
+  // let dropTarget = targetElement;
+  // if (targetElement.tagName === "IMG") {
+  //   dropTarget = targetElement.parentElement;
+  // }
+
+  // if (dropTarget && dropTarget.classList.contains("frag_holder")) {
+
+  //   dropTarget.classList.remove("empty");
+
+  //   const parentHolder = droppedElement.parentElement;
+  //   if (parentHolder.classList.contains("frag_holder")) {
+  //     parentHolder.classList.add("empty"); 
+  //   }
+
+  //   dropTarget.appendChild(droppedElement);
+  // }
+
 
   if (
     targetElement &&
@@ -249,4 +269,3 @@ if(correct){
   full_chapter.innerHTML = "<h1 class='text-center text-white'>You have Solved The Chapter - 1</h1>";
   correct_audio.style.display = "block";
 }
-
