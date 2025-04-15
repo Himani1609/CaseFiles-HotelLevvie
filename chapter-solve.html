@@ -22,7 +22,7 @@
     
     <!-- Button tab -->
     <div class="tab">
-        <button class="tablinks" onclick="openTab(event, 'Full-chapter-content')">Listen</button>
+        <button class="tablinks active" onclick="openTab(event, 'Full-chapter-content')">Listen</button>
         <button class="tablinks" onclick="openTab(event, 'Full-chapter-solve')">Solve</button>
     </div>
     
@@ -31,23 +31,23 @@
         <div id="full-chapters">
             <!-- Chapter - 1 -->
         <div class="chapter-1">
-            <p class="chapter-name">Chapter 1</p>
+            <p class="chapter-name">Hotel Levvie</p>
             <div class="chapter-box">
-                <img src="./images/chapter1.jpeg" id="chapter-1-img" class="card-img-top w-50" alt="..." onclick="turnOnAudio('chapter-1')">  
+                <img src="./images/chapter1.png" id="chapter-1-img" class="card-img-top-1" alt="Hotel Levvie Chapter Image" onclick="turnOnAudio('chapter-1')">  
             </div>
         </div>
         <!-- Chapter - 2 -->
         <div class="chapter-2">
-            <p class="chapter-name">Chapter 2</p>
+            <p class="chapter-name">The Investigation</p>
             <div class="chapter-box">
-                <img src="./images/chapter2.jpeg" id="chapter-2-img" class="card-img-top w-50" alt="..." onclick="turnOnAudio('chapter-2')">  
+                <img src="./images/chapter2.png" id="chapter-2-img" class="card-img-top-1" alt="The Investigation Chapter Image" onclick="turnOnAudio('chapter-2')">  
             </div>
         </div>
         <!-- Chapter - 3 -->
         <div class="chapter-3">
-            <p class="chapter-name">Chapter 3</p>
+            <p class="chapter-name">The Answer</p>
             <div class="chapter-box">
-                <img src="./images/chapter3.jpeg" id="chapter-3-img" class="card-img-top w-50" alt="..." onclick="turnOnAudio('chapter-3')">  
+                <img src="./images/chapter3.png" id="chapter-3-img" class="card-img-top-1" alt="The Answer Chapter Image" onclick="turnOnAudio('chapter-3')">  
             </div>
         </div>
         </div>
@@ -63,17 +63,20 @@
     
     <!-- Chapter Solve -->  
     <div id="Full-chapter-solve" class="tabcontent">
+
+        <p class="solve-instruction" style="margin-top: 50px;">Double click on chapter cards in order to unlock the whole story</p>
+
         <!-- Chapters -->
-     <div class="chapter-list" id="chapter_list" style="border: 3px solid orange;">
+     <div class="chapter-list" id="chapter_list">
         <!-- Chapter list -->
                 <div class="frag_holder" id="div1" ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)">
-                    <img src="./images/chapter1.jpeg" alt="" class="full-chapter-1" id="c1" draggable="true" ondblclick="doubleclickhandler(event)" ondragstart="dragstartHandler(event)" width="300" height="200"> 
+                    <img src="./images/chapter1.png" alt="" class="full-chapter-1" id="c1" draggable="true" ondblclick="doubleclickhandler(event)" ondragstart="dragstartHandler(event)" width="300" height="200"> 
                 </div>
                 <div class="frag_holder" id="div2" ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)">
-                    <img src="./images/chapter2.jpeg" alt="" class="full-chapter-2" id="c2" draggable="true" ondblclick="doubleclickhandler(event)" ondragstart="dragstartHandler(event)" width="300" height="200"> 
+                    <img src="./images/chapter2.png" alt="" class="full-chapter-2" id="c2" draggable="true" ondblclick="doubleclickhandler(event)" ondragstart="dragstartHandler(event)" width="300" height="200"> 
                 </div>
                 <div class="frag_holder" id="div3" ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)">
-                    <img src="./images/chapter3.jpeg" alt="" class="full-chapter-3" id="c3" draggable="true" ondblclick="doubleclickhandler(event)" ondragstart="dragstartHandler(event)" width="300" height="200"> 
+                    <img src="./images/chapter3.png" alt="" class="full-chapter-3" id="c3" draggable="true" ondblclick="doubleclickhandler(event)" ondragstart="dragstartHandler(event)" width="300" height="200"> 
                 </div>
         
        
@@ -84,35 +87,30 @@
 
         <div class="answer_container" id="answer_container">
             <div class="answer" id="answer_1">
-                <p>First Fragment</p>
+                <p>First Chapter</p>
                 <div id="ans1" class="answer_box" ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)">
                 </div>
                 <div class="check_logos">
-                    <!-- replace with logos -->
                     <div class="correct">Correct</div>
                     <div class="replace">Wrong Placement</div>
                     <div class="incorrect">Incorrect</div>
                 </div>
             </div>
-            <!--  -->
             <div class="answer" id="answer_2">
-                <p>Second Fragment</p>
+                <p>Second Chapter</p>
                 <div id="ans2" class="answer_box" ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)">
                 </div>
                 <div class="check_logos">
-                    <!-- replace with logos -->
                     <div class="correct">Correct</div>
                     <div class="replace">Wrong Placement</div>
                     <div class="incorrect">Incorrect</div>
                 </div>
             </div>
-            <!--  -->
             <div class="answer" id="answer_3">
-                <p>Third Fragment</p>
+                <p>Third Chapter</p>
                 <div id="ans3" class="answer_box" ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)">
                 </div>
                 <div class="check_logos">
-                    <!-- replace with logos -->
                     <div class="correct">Correct</div>
                     <div class="replace">Wrong Placement</div>
                     <div class="incorrect">Incorrect</div>
@@ -127,10 +125,11 @@
                 
             </div>
         </div>
-</div>
+    </div>
+    </div>
 
     <div id="correct-audio">
-        <audio src="./audio/test_audio.mp3" class="w-100 mt-3" controls></audio>
+        <audio src="./audio/test_audio.mp3" controls style="display: none;"></audio>
     </div>
 
     </main>

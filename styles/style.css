@@ -1,486 +1,810 @@
 /* ===========================================
-   GLOBAL STYLES
+GLOBAL STYLES
 =========================================== */
 @import url('https://fonts.googleapis.com/css2?family=Creepster&family=Lacquer&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Special+Elite&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
 
 body {
-    background: url(../images/background-regular.png) no-repeat center center fixed;
-    background-size: cover;
-    min-height: 100vh;
-    font-family: 'Arial', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: white;
+background: url(../images/background-regular.png) no-repeat center center fixed;
+background-size: cover;
+min-height: 100vh;
+font-family: 'Arial', sans-serif;
+display: flex;
+flex-direction: column;
+align-items: center;
+color: white;
 }
 
 
 /* ===========================================
-   HEADER
+HEADER
 =========================================== */
 #header {
-    width: 100%;
+width: 100%;
 }
 
 .nav-container {
-    position: relative;
-    top: 20px;
-    left: 40px;
-    right: 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: calc(100% - 80px);
-    z-index: 1000;
+position: relative;
+top: 20px;
+left: 40px;
+right: 40px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: calc(100% - 80px);
+z-index: 1000;
 }
 
 #case-title {
-    font-family: 'Lacquer', system-ui;
-    font-size: 2.2rem;
-    color: white;
-    text-shadow: 2px 2px 4px black;
-    margin: 0;
+font-family: 'Lacquer', system-ui;
+font-size: 2.2rem;
+color: white;
+text-shadow: 2px 2px 4px black;
+margin: 0;
 }
 
 #nav-links {
-    font-family: 'Lacquer', system-ui;
-    font-size: 1.2rem;
+font-family: 'Lacquer', system-ui;
+font-size: 1.2rem;
 }
 
 #nav-links a {
-    color: white;
-    text-decoration: none;
-    margin-left: 30px;
-    transition: color 0.3s ease;
+color: white;
+text-decoration: none;
+margin-left: 30px;
+transition: color 0.3s ease;
 }
 
 #nav-links a:hover {
-    color: #ffcccc;
+color: #ffcccc;
 }
 
 
 /* ===========================================
-   MAIN SECTION
+MAIN SECTION
 =========================================== */
 main {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin-bottom: 40px;
+display: flex;
+flex-direction: column;
+width: 100%;
+margin-bottom: 40px;
 }
 
 
 /* ===========================================
-   FOOTER
+FOOTER
 =========================================== */
 #footer {
-    width: 100%;
-    text-align: center;
-    font-family: 'Special Elite', system-ui;
-    font-size: 1rem;
-    color: white;
-    margin-top: 3rem;
+width: 100%;
+text-align: center;
+font-family: 'Special Elite', system-ui;
+font-size: 1rem;
+color: white;
+margin-top: 3rem;
 }
 
 
 /* ===========================================
-   FRAGMENT STYLES
+FRAGMENT STYLES
 =========================================== */
 .fragment-1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-    text-align: center;
-    margin-top: 100px;
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 1.5rem;
+text-align: center;
+margin-top: 100px;
 }
 
 .fragment-box {
-    background-color: black;
-    border: 2px solid white;
-    width: 500px;
-    padding: 1rem;
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.15);
+width: 500px;
+padding: 1rem;
+border-radius: 12px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: flex-start;
 }
 
 .fragment-name {
-    font-family: 'Lacquer', system-ui;
-    color: white;
-    font-size: 1.3rem;
-    letter-spacing: 1px;
+font-family: 'Special Elite', cursive;
+color: white;
+font-size: 2rem;
+letter-spacing: 1px;
 }
 
+
 audio {
-    border-radius: 30px;
-    padding: 0.5rem;
-    max-width: 320px;
-    background-color: white;
-    outline: none;
-    display: block;
-    margin: 1.5rem auto 0 auto;
-}
-#correct-audio{
-    display: none;
+border-radius: 30px;
+padding: 0.5rem;
+max-width: 320px;
+background-color: white;
+outline: none;
+display: block;
+margin: 1.5rem auto 0 auto;
 }
 
 
 /* ===========================================
-   INTRO PAGE STYLING
+INTRO PAGE STYLING
 =========================================== */
 .main_section {
-    margin-top: 100px;
-    width: 100%;
-    font-family: 'Special Elite', monospace;
+margin-top: 100px;
+width: 100%;
+font-family: 'Special Elite', monospace;
 }
 
 .main_section .row {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+display: flex;
+flex-wrap: wrap;
+align-items: center;
 }
 
 .main_section .col-md-6 {
-    width: 50%;
-    padding: 1rem;
+width: 50%;
+padding: 1rem;
 }
 
 .main_section img {
-    border: 4px solid white;
-    border-radius: 20px;
-    box-shadow: 0 0 10px rgb(138, 19, 19);
-    width: 100%;
-    height: auto;
+width: 500px;
+height: 500px;
 }
 
 .main_section p {
-    font-size: 1.5rem;
-    line-height: 1.6;
-    color: #eaeaea;
-    white-space: pre-line;
-    margin: 2em 0;
+margin-top: 3rem;
+font-size: 1.2rem;
+color: #eaeaea;
+line-height: 1.8;
+letter-spacing: 1.5px;
 }
 
 .main_section audio {
-    display: block;
-    margin: 1.5rem auto 0 auto;
-    border-radius: 30px;
-    background: white;
-    padding: 0.5rem;
-    width: 100%;
-    max-width: 300px;
+display: block;
+margin: 4.5rem auto 0 auto;
+border-radius: 30px;
+background: white;
+padding: 0.5rem;
+width: 100%;
+max-width: 300px;
 }
-
-/* ===========================================
-   ABOUT PAGE STYLES OR Credits Page
-=========================================== */
-#about-page {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    font-family: 'Special Elite', system-ui;
-}
-
-#about-page main {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 20px;
-}
-
-#about-page .teams-container {
-    display: flex;
-    justify-content: center;
-    gap: 200px;
-    margin: 0 auto;
-    padding: 30px;
-    max-width: 90%;
-}
-
-#about-page .team-column {
-    display: flex;
-    gap: 50px;
-    align-items: flex-start;
-}
-
-#about-page .role-column,
-#about-page .name-column {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    text-align: left;
-}
-#about-page .role-column {
-    width: auto; 
-    min-width: max-content; 
-}
-
-#about-page .name-column {
-    width: auto;
-    min-width: max-content;
-}
-
-#about-page .team-title {
-    margin-bottom: 15px;
-    font-size: 2rem;
-    font-weight: bold;
-}
-
-#about-page .team-member {
-    font-size: 1.3rem;
-    margin: 0;
-    white-space: nowrap;
-}
-
-#about-page .footer-links {
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-
-#about-page .footer-links a {
-    text-decoration: none;
-    color: white;
-    margin: 0 15px;
-    font-size: 1.2rem;
-}
-
-#about-page .footer-links a:hover {
-    color: rgb(138, 19, 19);
-}
-
-/* ===========================================
-   CHAPTER STYLES
-=========================================== */
-
-#Hotel-Levvie .tab{
-    margin-top: 60px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-#Hotel-Levvie #Chapter-1-content, #Chapter-2-content, #Chapter-3-content{
-    display: flex;
-    justify-content: center;
-}
-#Hotel-Levvie #case-title:hover {
-    color: #8a1313;
-    cursor: pointer;
-}
-
-.tab{
-    margin-top: 60px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-#chapter-3-content{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-#case-title:hover {
-    color: #8a1313;
-    cursor: pointer;
-}
-#chapter-3-solve .tabcontent{
-    max-width: 630px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.fragment-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-    max-width: 1200px; /* Adjust as needed */
-    margin: 0 auto;
-}
-
-.fragment-list .frag_holder {
-    width: calc(33.333% - 20px); /* 3 cards per row with gap */
-    max-width: 300px;
-    height: 200px;
-    border: 2px solid rgba(255,255,255,0.1);
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-}
-
-.frag_holder img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.frag_holder:hover {
-    transform: scale(1.05);
-    border-color: rgba(255,255,255,0.3);
-}
-
-.answer_container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 30px;
-}
-
-.answer_box {
-    width: 300px;
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#Chapter-1-solve, #Chapter-2-solve, #Chapter-3-solve{
-    flex-direction: column;
-}
-
-.solve_btns{
-    margin-top: 20px;
-    text-align: center;
-}
-/* ===========================================
-   RESPONSIVE STYLES
-=========================================== */
-@media screen and (max-width: 1024px) {
-    .fragment-box {
-        max-width: 90%;
-    }
-
-    .main_section .col-md-6 {
-        width: 100%;
-    }
-
-    .main_section p {
-        font-size: 1.3rem;
-        margin: 1.5em 1rem;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .nav-container {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5rem;
-    }
-
-    #nav-links {
-        align-self: flex-start;
-        margin-top: 0.5rem;
-    }
-
-    #nav-links a {
-        margin-left: 0;
-        margin-right: 20px;
-    }
-
-    .main_section .row {
-        flex-direction: column;
-    }
-
-    .main_section p {
-        font-size: 1.2rem;
-    }
-
-    audio {
-        width: 100%;
-        max-width: 100%;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    #case-title {
-        font-size: 1.5rem;
-    }
-
-    #nav-links {
-        font-size: 1rem;
-    }
-
-    .fragment-name {
-        font-size: 1.1rem;
-    }
-
-    .main_section p {
-        font-size: 1rem;
-    }
-
-    .fragment-box {
-        padding: 1rem;
-    }
-}
-
-/* Designers redefine everthing below this please */
 
 .fragment-list{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: space-evenly;
 }
 
 #target{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: space-evenly;
+border: 2px dashed #bbb;
+background-color: rgba(255, 255, 255, 0.05);
+transition: all 0.3s ease;
 }
+
 .answer_container{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+display: flex;
+align-items: center;
+justify-content: space-between;
 }
+
 .answer_box{
-    width: 310px;
-    height: 210px;
-    padding: 5px;
-    border: 2px solid green;
+width: 310px;
+height: 210px;
+padding: 5px;
+border: 2px solid green;
 }
 
 .check_logos div{
-    display: none;
+display: none;
 }
 
 .frag_holder{
-    border: 1px red solid;
-    height: 210px;
-    width: 310px;
-    padding: 5px;
+border: 1px red solid;
+height: 210px;
+width: 310px;
+padding: 5px;
 }
 
 #Chapter-1-solve, #Chapter-2-solve, #Chapter-3-solve{
-    display: none;
+display: none;
 }
 
 
 /* FULL CHAPTER ORDERING STYLES */
 
 #Full-chapter-solve{
-    display: none;
+display: none;
 }
 
 #full-chapter-1-audio,#full-chapter-2-audio,#full-chapter-3-audio{
-    display: none;
+display: none;
 }
 
 #full-chapters{
-    display: flex;
+display: flex;
 }
 
+/* --------------------------------------------
+ACCESSIBLE & BALANCED ABOUT PAGE STYLING
+-------------------------------------------- */
+
+#about-page {
+background: url(../images/background-regular.png) no-repeat center center fixed;
+background-size: cover;
+color: #f5f5f5;
+font-family: 'Special Elite', monospace;
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+/* Team Section Container */
+.teams-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 60px;
+width: 100%;
+padding: 60px 20px;
+}
+
+/* Individual Team Group */
+.team-column {
+background-color: rgba(0, 0, 0, 0.3);
+border: 1px solid #444;
+border-radius: 12px;
+padding: 30px;
+max-width: 800px;
+width: 100%;
+box-shadow: 0 0 12px rgba(255, 255, 255, 0.05);
+}
+
+.team-title {
+font-family: 'Lacquer', sans-serif;
+font-size: 1.8rem;
+text-align: center;
+color: #80d0ff;
+border-bottom: 2px solid #64c5ea;
+padding-bottom: 10px;
+margin-bottom: 20px;
+letter-spacing: 0.5px;
+}
+
+/* Name/Role Table Style */
+.team-roles-names {
+display: flex;
+justify-content: space-between;
+gap: 40px;
+flex-wrap: wrap;
+margin-bottom: 20px;
+}
+
+.name-column,
+.role-column {
+display: flex;
+flex-direction: column;
+gap: 10px;
+font-family: 'Courier New', monospace;
+}
+
+.name-column h4,
+.role-column h4 {
+font-size: 1.1rem;
+color: #aad4ff;
+margin-bottom: 5px;
+}
+
+.team-member {
+font-size: 1rem;
+color: #f0f0f0;
+white-space: nowrap;
+}
+
+/* Audio and Foley Details */
+.inline-credits {
+margin-top: 20px;
+font-family: 'Courier New', monospace;
+color: #e0e0e0;
+line-height: 1.6;
+}
+
+.inline-credits h2 {
+font-size: 1.2rem;
+margin-top: 24px;
+color: #ffd8d8;
+border-bottom: 1px solid #888;
+padding-bottom: 5px;
+}
+
+.inline-credits p {
+margin: 5px 0;
+}
+
+.inline-credits ol {
+padding-left: 20px;
+margin-top: 10px;
+margin-bottom: 10px;
+}
+
+.inline-credits ol li {
+margin-bottom: 6px;
+}
+
+/* Footer Styling */
+#footer {
+width: 100%;
+text-align: center;
+font-family: 'Special Elite', system-ui;
+font-size: 1rem;
+color: #cccccc;
+margin-top: auto;
+padding: 20px 0;
+}
+
+.footer-links {
+margin-top: 10px;
+}
+
+.footer-links a {
+text-decoration: none;
+color: #bbb;
+margin: 0 10px;
+font-size: 1.05rem;
+transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+color: #ffffff;
+}
+
+
+/* ===========================================
+TABS (Listen / Solve)
+=========================================== */
+.tab {
+display: flex;
+justify-content: center;
+margin-top: 40px;
+gap: 10px;
+}
+
+.tab button {
+font-family: 'Special Elite', cursive;
+font-size: 1.2rem;
+padding: 10px 30px;
+border-radius: 30px;
+border: 3px solid white;
+background-color: black;
+color: white;
+cursor: pointer;
+transition: 0.3s;
+}
+
+.tab button:first-child.active,
+.tab button:first-child:focus {
+background-color: #5e1818;
+}
+
+.tab button:last-child.active,
+.tab button:last-child:focus {
+background-color: #5e1818;
+}
+
+/* ===========================================
+CHAPTER CARDS
+=========================================== */
+
+#chapter-1-content,#chapter-2-content,#chapter-3-content {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 25px;
+background: transparent;
+border: 2px solid white;
+margin: 40px auto;
+}
+
+#chapter-1-content .card-title, #chapter-2-content .card-title,#chapter-3-content .card-title {
+font-family: 'Special Elite', cursive;
+color: white;
+font-size: 2rem;
+letter-spacing: 1px;
+}
+
+#chapter-1-solve, #chapter-2-solve,#chapter-3-solve{
+background: none;
+display: flex;
+align-items: center;
+border: none;
+}
+
+#Chapter-1-solve .card-title-solve, #Chapter-2-solve .card-title-solve, #Chapter-3-solve .card-title-solve{
+font-family: 'Special Elite', cursive;
+color: white;
+font-size: 2rem;
+letter-spacing: 1px;
+}
+
+
+#chapter-1-content .card-img-top,#chapter-2-content .card-img-top,#chapter-3-content .card-img-top {
+width: 100%;
+margin-top: 24px;
+transition: border 0.3s ease;
+}
+
+#chapter-1-content audio,#chapter-2-content audio,#chapter-3-content audio {
+width: 100%;
+border-radius: 30px;
+background-color: white;
+padding: 5px;
+}
+
+
+/* Audio */
+audio {
+margin-top: 20px;
+border-radius: 25px;
+background-color: white;
+padding: 8px;
+width: 100%;
+max-width: 400px;
+}
+
+/* ===========================================
+FRAGMENT GRID STYLING
+=========================================== */
+.fragment-list {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 10px;
+margin-top: 40px;
+padding: 20px;
+justify-items: center;
+}
+
+
+.frag_holder {
+border: none;
+width: 180px;
+height: 180px;
+text-align: center;
+font-family: 'Special Elite', cursive;
+border: 2px dashed #bbb;
+background-color: rgba(255, 255, 255, 0.05);
+transition: all 0.3s ease;
+}
+
+.frag_holder img.fragment {
+width: 100%;
+height: 100%;
+border-radius: 10px;
+object-fit: cover;
+box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+cursor: grab;
+}
+
+.frag_holder p {
+color: white;
+margin-top: 5px;
+font-size: 0.9rem;
+}
+
+/* ===========================================
+INSTRUCTION TEXT
+=========================================== */
+#Chapter-1-solve > h5,
+#chapter-1-solve > h5,
+#Chapter-2-solve > h5,
+#chapter-2-solve > h5,
+#Chapter-3-solve > h5,
+#chapter-3-solve > h5 {
+font-family: 'Special Elite', cursive;
+font-size: 1.8rem;
+color: white;
+margin-top: 50px;
+}
+
+
+.solve-instruction {
+text-align: center;
+font-family: 'Special Elite', cursive;
+font-size: 1.4rem;
+color: white;
+margin-top: 50px;
+margin-bottom: 10px;
+}
+
+
+
+
+/* ===========================================
+ANSWER AREA
+=========================================== */
+.answer_container {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 40px;
+flex-wrap: wrap;
+margin-top: 90px;
+}
+
+.answer {
+text-align: center;
+font-family: 'Special Elite', cursive;
+color: white;
+}
+
+
+.answer p{
+font-size: 1.2rem;
+}
+
+.answer_box {
+background-color: rgba(255, 255, 255, 0.05);
+border: 2px dashed white;
+margin: 10px;
+padding: 5px;
+}
+
+.check_logos {
+margin-top: 10px;
+}
+
+.check_logos .correct {
+color: #8aff8a;
+}
+
+.check_logos .replace {
+color: #6ad2ff;
+}
+
+.check_logos .incorrect {
+color: #ff6b6b;
+}
+
+/* ===========================================
+BUTTONS
+=========================================== */
+
+.buttons{
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.check,.reset
+{
+font-family: 'Special Elite', cursive;
+padding: 10px 30px;
+font-size: 1rem;
+margin: 40px 30px;
+border-radius: 30px;
+border: none;
+background-color: white;
+color: black;
+cursor: pointer;
+transition: 0.3s ease;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.check:hover,
+.reset:hover {
+background-color: #5e1818;
+color: white;
+}
+
+/* ===========================================
+ERROR BOX
+=========================================== */
+#error_box {
+text-align: center;
+color: #ff9999;
+font-family: 'Courier New', monospace;
+margin-top: 20px;
+font-size: 1.1rem;
+}
+
+
+/* ===============================
+FULL CHAPTER PAGE STYLING
+================================ */
+
+#full-chapters {
+display: flex;
+justify-content: center;
+gap: 60px;
+margin: 60px;
+}
+
+.chapter-box {
+padding: 10px;
+display: flex;
+justify-content: center;
+}
+
+
+.chapter-name {
+text-align: center;
+font-family: 'Special Elite', cursive;
+color: white;
+font-size: 1.7rem;
+margin-bottom: 10px;
+}
+
+.audio-containers {
+display: flex;
+justify-content: center;
+gap: 30px;
+}
+
+.audio-containers audio {
+border-radius: 25px;
+background-color: white;
+padding: 0.5rem;
+max-width: 350px;
+}
+
+/* ===============================
+FULL CHAPTER SOLVE SECTION
+================================ */
+#Full-chapter-solve {
+margin-top: 40px;
+text-align: center;
+}
+
+.chapter-list {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+margin-top: 40px;
+padding: 20px;
+justify-items: center;
+}
+
+
+.chapter-list .frag_holder {
+border: none;
+width: 180px;
+height: 180px;
+text-align: center;
+font-family: 'Special Elite', cursive;
+border: 2px dashed #bbb;
+background-color: rgba(255, 255, 255, 0.05);
+transition: all 0.3s ease;
+}
+
+.chapter-list  .frag_holder img {
+width: 100%;
+height: 100%;
+border-radius: 10px;
+object-fit: cover;
+box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+cursor: grab;
+}
+
+.frag_holder p {
+color: white;
+margin-top: 5px;
+font-size: 0.9rem;
+}
+
+
+#Chapter-1-solve, #Chapter-2-solve,#Chapter-3-solve {
+flex-direction: column;
+}
+
+.card-img-top-1{
+width: 90%;
+height: 90%;
+}
+
+
+
+/* ===========================================
+RESPONSIVE DESIGN (Tablets and Phones)
+=========================================== */
+@media (max-width: 992px) {
+.tab {
+    flex-direction: column;
+    align-items: center;
+}
+
+.answer_container {
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 60px;
+}
+
+.audio-containers {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+.chapter-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+#full-chapters {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.buttons {
+    flex-direction: column;
+    gap: 15px;
+}
+
+.check, .reset {
+    width: 80%;
+    text-align: center;
+}
+
+.chapter-box img,
+.card-img-top-1,
+.chapter-box {
+    width: 90% !important;
+    height: auto;
+}
+
+.main_section .col-md-6 {
+    width: 100%;
+    text-align: center;
+}
+
+.main_section img {
+    width: 80%;
+    height: auto;
+    margin: auto;
+}
+
+.main_section p {
+    padding: 0 20px;
+}
+}
+
+@media (max-width: 576px) {
+.chapter-list {
+    grid-template-columns: 1fr;
+}
+
+.tab button {
+    width: 90%;
+}
+
+.fragment-list {
+    grid-template-columns: 1fr;
+}
+
+.frag_holder,
+.answer_box {
+    width: 90% !important;
+    height: auto !important;
+}
+
+.chapter-name {
+    font-size: 1.3rem;
+}
+
+.main_section h1 {
+    font-size: 2rem;
+}
+
+.main_section p {
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+}
