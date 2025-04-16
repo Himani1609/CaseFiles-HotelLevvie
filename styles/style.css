@@ -378,7 +378,7 @@ margin-top: 40px;
 gap: 10px;
 }
 
-.tab button, .chapter_solve_ready button, #restart_game button{
+.tab button, .chapter_solve_ready button, #restart_game button, #final-btn{
 font-family: 'Special Elite', cursive;
 font-size: 1.2rem;
 padding: 10px 30px;
@@ -714,103 +714,45 @@ width: 90%;
 height: 90%;
 }
 
-
-
-/* ===========================================
-RESPONSIVE DESIGN (Tablets and Phones)
-=========================================== */
-@media (max-width: 992px) {
-.tab {
-    flex-direction: column;
-    align-items: center;
-}
-
-.answer_container {
-    flex-direction: column;
-    gap: 20px;
+#correct-audio h2{
     margin-top: 60px;
+    color:#6ad2ff;
+    text-shadow: 1.5px 1.5px #772d2d;
+    font-weight: bold;
+}
+#correct-audio h3{
+    margin: 50px;
+    color:#6ad2ff;
+    text-shadow: 1.5px 1.5px #772d2d;
+    font-weight: bold;
 }
 
-.audio-containers {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding: 10px;
+
+#correct-audio  .chapter_solve_ready .congrats-msg{
+    color: #772d2d;
+    text-shadow: 1px 1px #e0e0e0;
+    font-weight: bold;
+    font-size: 2.5rem;
 }
 
-.chapter-list {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+#correct-audio  .chapter_solve_ready h3{
+    color: #772d2d;
+    text-shadow: 1px 1px #e0e0e0;
+    font-weight: bold;
+    font-size: 2.5rem;
 }
 
-#full-chapters {
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
+
+.chapter_solve_ready button{
+    background-color: #772d2d;
 }
 
-.buttons {
-    flex-direction: column;
-    gap: 15px;
+#restart_game button, #final-btn{
+    margin-top: 40px;
+    background-color: #772d2d;
 }
 
-.check, .reset {
-    width: 80%;
-    text-align: center;
-}
-
-.chapter-box img,
-.card-img-top-1,
-.chapter-box {
-    width: 90% !important;
-    height: auto;
-}
-
-.main_section .col-md-6 {
-    width: 100%;
-    text-align: center;
-}
-
-.main_section img {
-    width: 80%;
-    height: auto;
-    margin: auto;
-}
-
-.main_section p {
-    padding: 0 20px;
-}
-}
-
-@media (max-width: 576px) {
-.chapter-list {
-    grid-template-columns: 1fr;
-}
-
-.tab button {
-    width: 90%;
-}
-
-.fragment-list {
-    grid-template-columns: 1fr;
-}
-
-.frag_holder,
-.answer_box {
-    width: 90% !important;
-    height: auto !important;
-}
-
-.chapter-name {
-    font-size: 1.3rem;
-}
-
-.main_section h1 {
-    font-size: 2rem;
-}
-
-.main_section p {
-    font-size: 1rem;
-    letter-spacing: 1px;
-}
+.final-btn{
+    display: flex;
+    justify-content: center;
 }

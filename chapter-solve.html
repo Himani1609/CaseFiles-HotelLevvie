@@ -28,37 +28,39 @@
     
     <!-- Chapter - Content -->
     <div id="Full-chapter-content" class="tabcontent">
+        <p class="solve-instruction" style="margin-top: 50px;">Click on Chapter Card to Listen it's Audio</p>
+
         <div id="full-chapters">
+            <!-- Chapter - 3 -->
+            <div class="chapter-3">
+                <p class="chapter-name">The Answer</p>
+                <div class="chapter-box">
+                    <img src="./images/chapter3.png" id="chapter-3-img" class="card-img-top-1" alt="The Answer Chapter Image" onclick="turnOnAudio('chapter-3')">  
+                </div>
+            </div>
             <!-- Chapter - 1 -->
-        <div class="chapter-1">
-            <p class="chapter-name">Hotel Levvie</p>
-            <div class="chapter-box">
-                <img src="./images/chapter1.png" id="chapter-1-img" class="card-img-top-1" alt="Hotel Levvie Chapter Image" onclick="turnOnAudio('chapter-1')">  
+            <div class="chapter-1">
+                <p class="chapter-name">Hotel Levvie</p>
+                <div class="chapter-box">
+                    <img src="./images/chapter1.png" id="chapter-1-img" class="card-img-top-1" alt="Hotel Levvie Chapter Image" onclick="turnOnAudio('chapter-1')">  
+                </div>
             </div>
-        </div>
-        <!-- Chapter - 2 -->
-        <div class="chapter-2">
-            <p class="chapter-name">The Investigation</p>
-            <div class="chapter-box">
-                <img src="./images/chapter2.png" id="chapter-2-img" class="card-img-top-1" alt="The Investigation Chapter Image" onclick="turnOnAudio('chapter-2')">  
+            <!-- Chapter - 2 -->
+            <div class="chapter-2">
+                <p class="chapter-name">The Investigation</p>
+                <div class="chapter-box">
+                    <img src="./images/chapter2.png" id="chapter-2-img" class="card-img-top-1" alt="The Investigation Chapter Image" onclick="turnOnAudio('chapter-2')">  
+                </div>
             </div>
-        </div>
-        <!-- Chapter - 3 -->
-        <div class="chapter-3">
-            <p class="chapter-name">The Answer</p>
-            <div class="chapter-box">
-                <img src="./images/chapter3.png" id="chapter-3-img" class="card-img-top-1" alt="The Answer Chapter Image" onclick="turnOnAudio('chapter-3')">  
-            </div>
-        </div>
         </div>
         
     </div>
 
     <!-- Audio Container -->
      <div class="audio-containers">
-        <audio src="./audio/test_audio.mp3" controls id="full-chapter-1-audio"></audio>
-        <audio src="./audio/test-audio-2.mp3" controls id="full-chapter-2-audio"></audio>
-        <audio src="./audio/test-audio-3.mp3" controls id="full-chapter-3-audio"></audio>
+        <audio src="./audio/chapter1full.mp3" controls id="full-chapter-1-audio"></audio>
+        <audio src="./audio/chapter2full.mp3" controls id="full-chapter-2-audio"></audio>
+        <audio src="./audio/chapter3full.mp3" controls id="full-chapter-3-audio"></audio>
      </div>
     
     <!-- Chapter Solve -->  
@@ -122,8 +124,12 @@
     </div>
 
     <div id="correct-audio" style="display: none;">
-        <h2 class='text-center mt-4 text-white'>You have Solved The Chapter Placement</h2>
+        <h2 class='text-center'>You have Solved The Chapter Placement</h2>
         <div class="d-flex align-items-end"> 
+            <div class="card chapter-content w-25 mt-5" id="chapter-1-content" style="width: 18rem; border:none;">
+                <h5 class="card-title text-center">The Answer</h5>
+                <img src="./images/chapter3.png" class="card-img-top " alt="Hotel Levvie Chapter Image">  
+            </div>
             <div class="card chapter-content w-25 mt-5" id="chapter-1-content" style="width: 18rem; border:none;">
                 <h5 class="card-title text-center">Hotel Levvie</h5>
                 <img src="./images/chapter1.png" class="card-img-top " alt="Hotel Levvie Chapter Image">  
@@ -132,19 +138,17 @@
                 <h5 class="card-title text-center">The Investigation</h5>
                 <img src="./images/chapter2.png" class="card-img-top " alt="Hotel Levvie Chapter Image">  
             </div>
-            <div class="card chapter-content w-25 mt-5" id="chapter-1-content" style="width: 18rem; border:none;">
-                <h5 class="card-title text-center">The Answer</h5>
-                <img src="./images/chapter1.png" class="card-img-top " alt="Hotel Levvie Chapter Image">  
-            </div>
         </div>
-        <h3 class='text-center mt-4 text-white'>Unlocked Final Story</h3>
-        <audio src="./audio/chapter1full.mp3" class="w-100 mt-3" controls></audio>
+        <!-- <h3 class='text-center'>Unlocked Final Story</h3>
+        <audio src="./audio/Final.mp3" class="w-100 mt-3" controls></audio> -->
 
         <div class="chapter_solve_ready" id="chapter_solve_ready" style="display: none;">
-            <h3 class='text-center mt-4 text-white'>Game Solved</h3>
-            <p class="text-center mt-1 text-white">Go to Credits Page</p>
-            <button class="tablinks" 
-            onclick="window.location.href='credits.html'">Credits</button>
+            <h3 class='text-center'>Congratulations! Game Solved.</h3> 
+            <!-- <p class="text-center mt-1 text-white">Go to Credits Page</p> -->
+             <div class="final-btn">
+                <button class="tablinks" id="final-btn"  onclick="window.location.href='final.html'">Unlock Whole Story</button> 
+             </div>
+           
         </div>
 
     </div>
