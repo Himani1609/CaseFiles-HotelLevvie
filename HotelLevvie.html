@@ -21,7 +21,7 @@
     <main>
     
     <!-- Button tab -->
-    <div class="tab">
+    <div class="tab" id="tab">
         <button class="tablinks active"  onclick="openTab(event, 'Chapter-1-content')">Listen</button>
         <button class="tablinks" onclick="openTab(event, 'Chapter-1-solve')">Solve</button>
     </div>
@@ -46,37 +46,7 @@
         <!-- Fragments -->
         <div class="fragment-list" id="fragment_list">
         <!-- Chapter - 1 Fragments -->
-                <div class="frag_holder" id="div1" ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)">
-                    <img src="./images/c1-fragment1.png" alt="" class="fragment chapter-1" id="c1-f1" draggable="true" ondblclick="doubleclickhandler(event)" ondragstart="dragstartHandler(event)" width="300" height="200"> 
-                </div>
-                <div class="frag_holder" id="div2" ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)">
-                    <img src="./images/c1-fragment2.png" alt="" class="fragment chapter-1" id="c1-f2" draggable="true" ondblclick="doubleclickhandler(event)" ondragstart="dragstartHandler(event)" width="300" height="200"> 
-                </div>
-                <div class="frag_holder" id="div3" ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)">
-                    <img src="./images/c1-fragment3.png" alt="" class="fragment chapter-1" id="c1-f3" draggable="true" ondblclick="doubleclickhandler(event)" ondragstart="dragstartHandler(event)" width="300" height="200"> 
-                </div>
-        
-        <!-- Chapter - 2 Fragments -->
-                <div class="frag_holder" id="div4" ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)">
-                    <img src="./images/c2-fragment1.png" alt="" class="fragment chapter-2" id="c2-f1" draggable="true" ondblclick="doubleclickhandler(event)" ondragstart="dragstartHandler(event)" width="300" height="200"> 
-                </div>
-                <div class="frag_holder" id="div5" ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)">
-                    <img src="./images/c2-fragment2.png" alt="" class="fragment chapter-2" id="c2-f2" draggable="true" ondblclick="doubleclickhandler(event)" ondragstart="dragstartHandler(event)" width="300" height="200"> 
-                </div>
-                <div class="frag_holder" id="div6" ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)">
-                    <img src="./images/c2-fragment3.png" alt="" class="fragment chapter-2" id="c2-f3" draggable="true" ondblclick="doubleclickhandler(event)" ondragstart="dragstartHandler(event)" width="300" height="200"> 
-                </div>
-       
-        <!-- Chapter - 3 Fragments -->
-                <div class="frag_holder" id="div7" ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)">
-                    <img src="./images/c3-fragment1.png" alt="" class="fragment chapter-3" id="c3-f1" draggable="true" ondblclick="doubleclickhandler(event)" ondragstart="dragstartHandler(event)" width="300" height="200"> 
-                </div>
-                <div class="frag_holder" id="div8" ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)">
-                    <img src="./images/c3-fragment2.png" alt="" class="fragment chapter-3" id="c3-f2" draggable="true" ondblclick="doubleclickhandler(event)" ondragstart="dragstartHandler(event)" width="300" height="200"> 
-                </div>
-                <div class="frag_holder" id="div9" ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)">
-                    <img src="./images/c3-fragment3.png" alt="" class="fragment chapter-3" id="c3-f3" draggable="true" ondblclick="doubleclickhandler(event)" ondragstart="dragstartHandler(event)" width="300" height="200"> 
-                </div>
+
         </div>
 
             <!-- <div id="target"  ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)">
@@ -129,8 +99,21 @@
 
     </div>
 
-    <div id="correct-audio">
-        <audio src="./audio/test_audio.mp3" class="w-100 mt-3" controls style="display: none;"></audio>
+    <div id="correct-audio" style="display: none;">
+        <h2 class='text-center mt-4 text-white'>You have Solved The Chapter - 1</h2>
+        <div class="card chapter-content w-25 mt-5" id="chapter-1-content" style="width: 18rem; border:none;">
+            <h5 class="card-title text-center">Hotel Levvie</h5>
+            <img src="./images/chapter1.png" class="card-img-top " alt="Hotel Levvie Chapter Image">  
+        </div>
+        <h3 class='text-center mt-4 text-white'>Unlocked Full Audio</h3>
+        <audio src="./audio/chapter1full.mp3" class="w-100 mt-3" controls></audio>
+
+        <div class="chapter_solve_ready" id="chapter_solve_ready" style="display: none;">
+            <h3 class='text-center mt-4 text-white'>All Chapters Solve!</h3>
+            <p class="text-center mt-1 text-white">Go to Chapter Solve page</p>
+            <button class="tablinks" onclick="window.location.href='chapter-solve.html'">Solve</button>
+        </div>
+
     </div>
 
     </main>
