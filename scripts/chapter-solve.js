@@ -342,6 +342,12 @@ check.onclick = function() {
 
   if(flag){
     localStorage.setItem("correct_chapters",  JSON.stringify(true));
+    const reload_true = JSON.parse(localStorage.getItem('correct_chapters'));
+    if (reload_true) {
+      setTimeout(() => {
+        window.location.reload();
+      }, 2000);
+    }
   }
 }
 
