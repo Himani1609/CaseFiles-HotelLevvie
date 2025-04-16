@@ -21,7 +21,7 @@
     <main>
     
     <!-- Button tab -->
-    <div class="tab">
+    <div class="tab" id="tab">
         <button class="tablinks active" onclick="openTab(event, 'Full-chapter-content')">Listen</button>
         <button class="tablinks" onclick="openTab(event, 'Full-chapter-solve')">Solve</button>
     </div>
@@ -69,15 +69,8 @@
         <!-- Chapters -->
      <div class="chapter-list" id="chapter_list">
         <!-- Chapter list -->
-                <div class="frag_holder" id="div1" ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)">
-                    <img src="./images/chapter1.png" alt="" class="full-chapter-1" id="c1" draggable="true" ondblclick="doubleclickhandler(event)" ondragstart="dragstartHandler(event)" width="300" height="200"> 
-                </div>
-                <div class="frag_holder" id="div2" ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)">
-                    <img src="./images/chapter2.png" alt="" class="full-chapter-2" id="c2" draggable="true" ondblclick="doubleclickhandler(event)" ondragstart="dragstartHandler(event)" width="300" height="200"> 
-                </div>
-                <div class="frag_holder" id="div3" ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)">
-                    <img src="./images/chapter3.png" alt="" class="full-chapter-3" id="c3" draggable="true" ondblclick="doubleclickhandler(event)" ondragstart="dragstartHandler(event)" width="300" height="200"> 
-                </div>
+                
+                 
         
        
         </div>
@@ -128,8 +121,32 @@
     </div>
     </div>
 
-    <div id="correct-audio">
-        <audio src="./audio/test_audio.mp3" controls style="display: none;"></audio>
+    <div id="correct-audio" style="display: none;">
+        <h2 class='text-center mt-4 text-white'>You have Solved The Chapter Placement</h2>
+        <div class="d-flex align-items-end"> 
+            <div class="card chapter-content w-25 mt-5" id="chapter-1-content" style="width: 18rem; border:none;">
+                <h5 class="card-title text-center">Hotel Levvie</h5>
+                <img src="./images/chapter1.png" class="card-img-top " alt="Hotel Levvie Chapter Image">  
+            </div>
+            <div class="card chapter-content w-25 mt-5" id="chapter-1-content" style="width: 18rem; border:none;">
+                <h5 class="card-title text-center">The Investigation</h5>
+                <img src="./images/chapter2.png" class="card-img-top " alt="Hotel Levvie Chapter Image">  
+            </div>
+            <div class="card chapter-content w-25 mt-5" id="chapter-1-content" style="width: 18rem; border:none;">
+                <h5 class="card-title text-center">The Answer</h5>
+                <img src="./images/chapter1.png" class="card-img-top " alt="Hotel Levvie Chapter Image">  
+            </div>
+        </div>
+        <h3 class='text-center mt-4 text-white'>Unlocked Final Story</h3>
+        <audio src="./audio/chapter1full.mp3" class="w-100 mt-3" controls></audio>
+
+        <div class="chapter_solve_ready" id="chapter_solve_ready" style="display: none;">
+            <h3 class='text-center mt-4 text-white'>Game Solved</h3>
+            <p class="text-center mt-1 text-white">Go to Credits Page</p>
+            <button class="tablinks" 
+            onclick="window.location.href='credits.html'">Credits</button>
+        </div>
+
     </div>
 
     </main>

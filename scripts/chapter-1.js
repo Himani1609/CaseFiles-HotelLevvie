@@ -1,7 +1,12 @@
 // const chapter1Content = document.getElementById("chapter-1-content");
 const chapter1Solve = document.getElementById("chapter-1-solve");
 const full_chapter = document.getElementById("Chapter-1-solve");
+const full_content = document.getElementById("Chapter-1-content");
+const tab_btns = document.getElementById("tab");
 const correct_audio = document.getElementById("correct-audio");
+const frag_list = document.getElementById("fragment_list");
+const solve_ready = document.getElementById("chapter_solve_ready");
+
 
 // // Display the Listening content for chapter
 // function displayListenContent() {
@@ -59,42 +64,53 @@ const correct = JSON.parse(localStorage.getItem('Correct_Chapter_1'));
 const correct2 = JSON.parse(localStorage.getItem('Correct_Chapter_2'));
 const correct3 = JSON.parse(localStorage.getItem('Correct_Chapter_3'));
 
-reset.onclick = function() {
-  window.location.reload();
-}
 
 let currentAnswerIndex = 0;
 const maxAnswers = 3;
 
 let list_of_element = [];
-function doubleclickhandler(ev){
+function doubleclickhandler(ev) {
   ev.preventDefault();
 
-  if (list_of_element.includes(ev.target.id)) {
-    console.log("Already placed.");
+  const imageId = ev.target.id;
+
+  // If the image is already placed in an answer box
+  if (list_of_element.includes(imageId)) {
+    // Move it back to first available empty fragment container
+    for (let i = 1; i <= 9; i++) {
+      const fragBox = document.getElementById(`div${i}`);
+      if (fragBox.children.length === 0) {
+        fragBox.appendChild(ev.target);
+
+        // Remove from placed list
+        const index = list_of_element.indexOf(imageId);
+        if (index !== -1) list_of_element.splice(index, 1);
+
+        togglestatus();
+        console.log(`Returned ${imageId} to fragment area`);
+        return;
+      }
+    }
+
+    console.log("No empty fragment containers available.");
     return;
   }
 
-  // Find the first available answer box
-  let placed = false;
+
   for (let i = 1; i <= maxAnswers; i++) {
     const targetBox = document.getElementById(`ans${i}`);
-    
-    // If the answer box is empty (has no img)
-    if (targetBox && targetBox.children.length === 0) {
+    if (targetBox.children.length === 0) {
       targetBox.appendChild(ev.target);
-      list_of_element.push(ev.target.id);
-      console.log(`Transferred image ${ev.target.id} to answer container ans${i}`);
-      placed = true;
-      togglestatus(); 
-      break;
+      list_of_element.push(imageId);
+      togglestatus();
+      console.log(`Moved ${imageId} to answer box ans${i}`);
+      return;
     }
   }
 
-  if (!placed) {
-    console.log("All answer containers are full.");
-  }
+  console.log("All answer containers are full.");
 }
+
 
 
 function dragstartHandler(ev) {
@@ -190,20 +206,45 @@ function togglestatus() {
     allCards.forEach(card => card.setAttribute("ondblclick", "doubleclickhandler(event)"));
   }
 
-  if (list_of_element.length >= 3) {
-    allAnswerCards.forEach(card => card.setAttribute("ondblclick", ""));
-  } else {
-    allAnswerCards.forEach(card => card.setAttribute("ondblclick", "doubleclickhandler(event)"));
-  }
+  // if (list_of_element.length >= 3) {
+  //   allAnswerCards.forEach(card => card.setAttribute("ondblclick", ""));
+  // } else {
+  //   allAnswerCards.forEach(card => card.setAttribute("ondblclick", "doubleclickhandler(event)"));
+  // }
 }
 
+function randomiser(){
+  const fragment_map = {
+    0: '<div class="frag_holder" id="div1" ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)"> <img src="./images/c1-fragment1.png" alt="" class="fragment chapter-1" id="c1-f1" draggable="true" ondblclick="doubleclickhandler(event)" ondragstart="dragstartHandler(event)" width="300" height="200"> </div>',
+    1: '<div class="frag_holder" id="div2" ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)"> <img src="./images/c1-fragment2.png" alt="" class="fragment chapter-1" id="c1-f2" draggable="true" ondblclick="doubleclickhandler(event)" ondragstart="dragstartHandler(event)" width="300" height="200"> </div>',
+    2: '<div class="frag_holder" id="div3" ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)"> <img src="./images/c1-fragment3.png" alt="" class="fragment chapter-1" id="c1-f3" draggable="true" ondblclick="doubleclickhandler(event)" ondragstart="dragstartHandler(event)" width="300" height="200"> </div>',
+    3: '<div class="frag_holder" id="div4" ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)"> <img src="./images/c2-fragment1.png" alt="" class="fragment chapter-2" id="c2-f1" draggable="true" ondblclick="doubleclickhandler(event)" ondragstart="dragstartHandler(event)" width="300" height="200"> </div>',
+    4: '<div class="frag_holder" id="div5" ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)"> <img src="./images/c2-fragment2.png" alt="" class="fragment chapter-2" id="c2-f2" draggable="true" ondblclick="doubleclickhandler(event)" ondragstart="dragstartHandler(event)" width="300" height="200"> </div>',
+    5: '<div class="frag_holder" id="div6" ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)"> <img src="./images/c2-fragment3.png" alt="" class="fragment chapter-2" id="c2-f3" draggable="true" ondblclick="doubleclickhandler(event)" ondragstart="dragstartHandler(event)" width="300" height="200"> </div>',
+    6: '<div class="frag_holder" id="div7" ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)"> <img src="./images/c3-fragment1.png" alt="" class="fragment chapter-3" id="c3-f1" draggable="true" ondblclick="doubleclickhandler(event)" ondragstart="dragstartHandler(event)" width="300" height="200"> </div>',
+    7: '<div class="frag_holder" id="div8" ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)"> <img src="./images/c3-fragment2.png" alt="" class="fragment chapter-3" id="c3-f2" draggable="true" ondblclick="doubleclickhandler(event)" ondragstart="dragstartHandler(event)" width="300" height="200"> </div>',
+    8: '<div class="frag_holder" id="div9" ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)"> <img src="./images/c3-fragment3.png" alt="" class="fragment chapter-3" id="c3-f3" draggable="true" ondblclick="doubleclickhandler(event)" ondragstart="dragstartHandler(event)" width="300" height="200"> </div>'
+  }
+
+  const keys = Object.keys(fragment_map);
+
+  for (let i = keys.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [keys[i], keys[j]] = [keys[j], keys[i]];
+  }
+
+  keys.forEach(key => {
+    frag_list.innerHTML += fragment_map[key];
+  });
+}
+const submitted_ids = [];
+
 check.onclick = function() {
+  submitted_ids.length = 0; 
   const answer_containers = document.getElementsByClassName("answer");
   const placement = document.getElementById("placement");
 
     const submitted_elements = document.querySelectorAll(".answer_box img");
-
-    const submitted_ids = [];
     
     submitted_elements.forEach((img) => {
       submitted_ids.push(img.id);
@@ -259,13 +300,35 @@ check.onclick = function() {
     localStorage.setItem("Correct_Chapter_1",  JSON.stringify(true));
   }
 
-  if(correct && correct2 && correct3){
-    window.location.href("./chapter-solve.html")
-  }
 }
 
 if(correct){
-  chapter1Solve.style.display = "none";
-  full_chapter.innerHTML = "<h1 class='text-center text-white'>You have Solved The Chapter - 1</h1>";
+  tab_btns.style.display = "none";
+  full_content.style.display = "none";
+  full_chapter.style.display = "none";
   correct_audio.style.display = "block";
+}
+
+if(correct && correct2 && correct3){
+  solve_ready.style.display = "flex";
+}
+
+reset.onclick = function() {
+  frag_list.innerHTML = "";
+  randomiser();
+  // while(submitted_ids.length){
+  //   submitted_ids.pop();
+  // }
+  submitted_ids.length = 0;
+  for (let i = 1; i <= maxAnswers; i++) {
+    const targetBox = document.getElementById(`ans${i}`);
+    while(targetBox.children.length){
+      targetBox.innerHTML="";
+    }
+  }
+  list_of_element.length = 0;
+}
+
+window.onload = () => {
+  randomiser();
 }
