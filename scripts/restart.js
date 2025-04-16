@@ -16,6 +16,7 @@ window.onload =()=>{
         localStorage.removeItem("Correct_Chapter_1");
         localStorage.removeItem("Correct_Chapter_2");
         localStorage.removeItem("Correct_Chapter_3");
+        localStorage.removeItem("correct_chapters");
     }
     
 }

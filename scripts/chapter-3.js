@@ -300,6 +300,12 @@ check.onclick = function() {
 
   if(flag){
     localStorage.setItem("Correct_Chapter_3",  JSON.stringify(true));
+    const reload_true = JSON.parse(localStorage.getItem('Correct_Chapter_3'));
+    if (reload_true) {
+      setTimeout(() => {
+        window.location.reload();
+      }, 2000);
+    }
   }
 
 
