@@ -31,12 +31,12 @@ width: 100%;
 .nav-container {
 position: relative;
 top: 20px;
-left: 40px;
+left: 20px;
 right: 40px;
 display: flex;
 justify-content: space-between;
 align-items: center;
-width: calc(100% - 80px);
+width: calc(100% - 40px);
 z-index: 1000;
 }
 
@@ -391,9 +391,9 @@ transition: 0.3s;
 }
 
 #chapter_solve_ready{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+display: flex;
+flex-direction: column;
+align-items: center;
 }
 
 .tab button:first-child.active,
@@ -559,7 +559,6 @@ font-size: 1.2rem;
 .answer_box {
 background-color: rgba(255, 255, 255, 0.05);
 border: 2px dashed white;
-margin: 10px;
 padding: 5px;
 }
 
@@ -715,44 +714,297 @@ height: 90%;
 }
 
 #correct-audio h2{
-    margin-top: 60px;
-    color:#6ad2ff;
-    text-shadow: 1.5px 1.5px #772d2d;
-    font-weight: bold;
+margin-top: 60px;
+color:#6ad2ff;
+text-shadow: 1.5px 1.5px #772d2d;
+font-weight: bold;
 }
 #correct-audio h3{
-    margin: 50px;
-    color:#6ad2ff;
-    text-shadow: 1.5px 1.5px #772d2d;
-    font-weight: bold;
+margin: 50px;
+color:#6ad2ff;
+text-shadow: 1.5px 1.5px #772d2d;
+font-weight: bold;
 }
 
 
 #correct-audio  .chapter_solve_ready .congrats-msg{
-    color: #772d2d;
-    text-shadow: 1px 1px #e0e0e0;
-    font-weight: bold;
-    font-size: 2.5rem;
+color: #772d2d;
+text-shadow: 1px 1px #e0e0e0;
+font-weight: bold;
+font-size: 2.5rem;
 }
 
 #correct-audio  .chapter_solve_ready h3{
-    color: #772d2d;
-    text-shadow: 1px 1px #e0e0e0;
-    font-weight: bold;
-    font-size: 2.5rem;
+color: #772d2d;
+text-shadow: 1px 1px #e0e0e0;
+font-weight: bold;
+font-size: 2.5rem;
 }
 
 
 .chapter_solve_ready button{
-    background-color: #772d2d;
+background-color: #772d2d;
 }
 
 #restart_game button, #final-btn{
-    margin-top: 40px;
-    background-color: #772d2d;
+margin-top: 40px;
+background-color: #772d2d;
 }
 
 .final-btn{
-    display: flex;
-    justify-content: center;
+display: flex;
+justify-content: center;
+}
+
+
+
+
+/* ========== 768px (tablets & small landscape phones) ========== */
+@media screen and  (min-width: 1024px) {
+    #chapter-1-content, #chapter-2-content, #chapter-3-content {
+        width: 25%;
+    }
+
+    #chapter-1-solve, #chapter-2-solve, #chapter-3-solve {
+        width: 25%;
+        margin: 0 auto;
+        align-items: center;
+    }
+
+}
+
+@media screen and  (min-width: 768px) {
+    #chapter-1-content, #chapter-2-content, #chapter-3-content {
+        width: 50%;
+    }
+
+    #chapter-1-solve, #chapter-2-solve, #chapter-3-solve {
+        width: 50%;
+        margin: 0 auto;
+        align-items: center;
+    }
+
+}
+
+@media screen and  (max-width: 768px) {
+
+
+#nav-links {
+flex-wrap: wrap;
+gap: 15px;
+}
+
+.main_section .row,
+.teams-container,
+.fragment-list,
+.chapter-list,
+.answer_container {
+flex-direction: column;
+gap: 20px;
+}
+
+.col-md-6,
+.team-column,
+.frag_holder,
+.answer_box {
+width: 100% !important;
+padding: 1rem;
+}
+
+.main_section img,
+.card-img-top-1 {
+width: 100%;
+height: auto;
+}
+
+.buttons {
+gap: 10px;
+}
+
+.check, .reset {
+    margin: 20px 10px;
+}
+
+#chapter-1-content, #chapter-2-content, #chapter-3-content {
+    margin: 40px 100px;
+}
+}
+
+/* ========== 480px (standard smartphones) ========== */
+@media screen and  (max-width: 480px) {
+.nav-container {
+flex-direction: row;
+align-items: flex-start;
+padding: 0;
+}
+
+#case-title {
+font-family: 'Lacquer', system-ui;
+font-size: 1.5rem;
+color: white;
+text-shadow: 2px 2px 4px black;
+margin: 0;
+}
+
+
+#nav-links {
+font-size: 1.1rem;
+display: flex;
+flex-direction: row;
+gap: 2px;
+}
+
+.main_section .col-md-6,
+.team-column,
+.frag_holder,
+.answer_box {
+width: 100% !important;
+padding: 0.5rem;
+}
+
+.main_section img,
+.card-img-top-1 {
+width: 100%;
+height: auto;
+}
+
+
+.fragment-list,
+.chapter-list,
+.audio-containers,
+.answer_container {
+flex-direction: column;
+gap: 20px;
+}
+
+.fragment-box {
+    width: auto;
+}
+audio {
+    width: 95%;
+    max-width: 100%;
+}
+
+footer p{
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+#chapter-1-solve, #chapter-2-solve, #chapter-3-solve,#chapter-1-solve, #chapter-2-solve, #chapter-3-solve {
+    margin: 0 20px;
+}
+
+}
+
+/* ========== 320px (small phones) ========== */
+@media screen and (max-width: 320px) {
+.check, .reset {
+    padding: 5px 20px;
+}    
+
+.nav-container {
+display: flex;
+flex-direction: row;
+padding: 0;
+}
+#case-title {
+font-family: 'Lacquer', system-ui;
+font-size: 1.2rem;
+color: white;
+text-shadow: 2px 2px 4px black;
+margin: 0;
+}
+
+#nav-links {
+display: flex;
+flex-direction: row;
+gap: 8px;
+font-size: 0.9rem;
+}
+
+#nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 0px;
+    transition: color 0.3s ease;
+}
+
+.main_section .row,
+.teams-container,
+.audio-containers,
+.fragment-list,
+.chapter-list,
+.answer_container {
+    flex-direction: column !important;
+    gap: 15px;
+}
+
+.main_section p {
+    margin-top: 3rem;
+    font-size: 1rem;
+    color: #eaeaea;
+    line-height: 1.8;
+    letter-spacing: 1.5px;
+}
+
+.main_section p {
+    font-size: 1.1rem;
+    margin: 1em 0.5em;
+}
+
+.main_section audio {
+    margin: 1rem auto 0 auto;
+}
+
+.main_section img,
+.card-img-top-1 {
+    width: 100%;
+    height: auto;
+}
+
+audio {
+width: 100%;
+max-width: 100%;
+}
+
+.name-column, .role-column {
+    flex-direction: column;
+    gap: 10px;
+    font-family: 'Courier New', monospace;
+    flex-wrap: wrap;
+}
+
+.team-roles-names {
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.team-member {
+    white-space: wrap;
+}
+
+.inline-credits ol {
+    padding-left: 25px;
+}
+
+footer p{
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+#chapter-1-content, #chapter-2-content, #chapter-3-content {
+    margin: 40px 20px;
+}
+
+.fragment-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.tab button, .chapter_solve_ready button, #restart_game button, #final-btn {
+    font-family: 'Special Elite', cursive;
+    font-size: 1rem;
+    padding: 5px 20px;
+}
+
 }

@@ -13,6 +13,7 @@ window.onload =()=>{
     }
 
     restart.onclick = () => {
+        window.location.href = "./index.html";
         localStorage.removeItem("Correct_Chapter_1");
         localStorage.removeItem("Correct_Chapter_2");
         localStorage.removeItem("Correct_Chapter_3");
