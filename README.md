@@ -1,5 +1,8 @@
 # Case Files: Hotel Levvie
 
+## The Link for all online cards : [All Cards](https://docs.google.com/document/d/1xj79yg333UrrAvkww5I9d1DSM5IedWTMioKTv8fyF90/edit?usp=sharing)
+
+
 # Radio Jigsaw Project
 
 Radio Jigsaw is a project developed using frontend technologies including *HTML, **CSS, **Bootstrap, and **JavaScript*. It presents an interactive and responsive gameplay experience where users solve chapter-based puzzles through audio and drag-and-drop interactions.
