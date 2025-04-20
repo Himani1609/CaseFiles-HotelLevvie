@@ -765,26 +765,27 @@ justify-content: center;
 
 
 /* ========== 768px (tablets & small landscape phones) ========== */
-@media screen and  (min-width: 1024px) {
+
+
+@media screen and  (min-width: 769px) {
     #chapter-1-content, #chapter-2-content, #chapter-3-content {
-        width: 25%;
+        width: 50%;
     }
 
     #chapter-1-solve, #chapter-2-solve, #chapter-3-solve {
-        width: 25%;
+        width: 50%;
         margin: 0 auto;
         align-items: center;
     }
 
 }
-
-@media screen and  (min-width: 768px) {
+@media screen and  (min-width: 1024px) {
     #chapter-1-content, #chapter-2-content, #chapter-3-content {
-        width: 50%;
+        width: 35%;
     }
 
     #chapter-1-solve, #chapter-2-solve, #chapter-3-solve {
-        width: 50%;
+        width: 35%;
         margin: 0 auto;
         align-items: center;
     }
